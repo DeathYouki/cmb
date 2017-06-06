@@ -1,0 +1,60 @@
+.main-image {
+  overflow: hidden;
+  height: 400px; }
+
+.product__image--active {
+  max-height: 100%;
+  max-width: 100%; }
+
+.thumbnails {
+  overflow: hidden;
+  height: 50px; }
+  .thumbnails__element {
+    height: 50px;
+    width: 50px;
+    border: 1px solid green;
+    border-radius: 3px; }
+
+.informations__info {
+  display: inline-block; }
+.informations__label--hidden {
+  display: none; }
+
+.container-full--background {
+  background-color: #f0f0f0;
+  padding: 0px 0px 0px 0px !important;
+  margin: 0;
+  height: 100%; }
+
+html {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%; }
+
+.navbar {
+  border-radius: 0px !important; }
+
+.navbaricons {
+  font-size: 2.5em; }
+  .navbaricons--green {
+    color: #2ecc71; }
+  .navbaricons--red {
+    color: #e74c3c; }
+  .navbaricons--blue {
+    color: #3498db; }
+
+.link-input {
+  height: 50px;
+  background-color: #fff;
+  line-height: 40px; }
+  .link-input__input-container {
+    margin: 0px !important; }
+  .link-input__buttons-container {
+    margin: 0px !important; }
+
+/*# sourceMappingURL=app.css.map */
