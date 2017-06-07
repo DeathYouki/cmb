@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/externalproduct', 'ExternalProductController@getExternalProduct');
+
+Route::get('/adminexternalproduct', function(){
+	return view('layouts.adminexternalproduct');
+});
