@@ -52,8 +52,8 @@ $(document).ready(function() {
 				$("[data-role]").removeAttr("data-role");
 			}
 		}
-		var chosenVariantId;
-		var hashCode;
+		//var chosenVariantId;
+		//var hashCode;
 
 		$("[data-sku-id]").on("click", function(e){
 			// $(this) is equivalent of e.target in jqery
