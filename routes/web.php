@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/externalproduct', 'ExternalProductController@getExternalProduct');
+Route::get('/externalproduct', function() {
+	return view('layouts.externalproduct');
+});
 
 Route::get('/adminexternalproduct', function(){
 	return view('layouts.adminexternalproduct');
