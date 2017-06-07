@@ -10,6 +10,7 @@ $(document).ready(function() {
 			//Cloning the product section in case the 1st product has been added
 			var section = $('#j-product-section').clone();	
 			$('#j-products-container').append(section);
+			$('#j-product-section:last-child #j-product-variants').html('');
 		}
 
 	/*******Filling the page*******/
@@ -32,16 +33,13 @@ $(document).ready(function() {
 
 		console.log(variantsData);
 		var chosenVariantsTab = [];
-		//for(var i = 0; i < variantsData.variantContent.length; i++){
+		for(var i = 0; i < variantsData.variantContent.length; i++){
 			var variantCategorie = document.createElement('div');
-			//variantCategorie.setAttribute("style", "margin-bottom: 5px;");
-			//variantCategorie.setAttribute("id", "j-variant-categorie-container"+i);
-			//chosenVariantsTab[i] = [];
-			$('#j-product-section').css("background-color", "blue");
-			$('#j-product-section:last-child').css("background-color", "red");
-			console.log($('#j-product-section:last-child #j-product-variants'));	
+			variantCategorie.setAttribute("style", "margin-bottom: 5px;");
+			variantCategorie.setAttribute("id", "j-variant-categorie-container"+i);
+			chosenVariantsTab[i] = [];
 			$('#j-product-section:last-child #j-product-variants').append(variantCategorie);
-			/*for(var j = 0; j < variantsData.variantContent[i].length; j++){
+			for(var j = 0; j < variantsData.variantContent[i].length; j++){
 				var productVariant = variantsData.variantContent[i][j];
 				productVariant = $.parseHTML(productVariant);
 				var variantContainer = document.createElement('div');
@@ -49,12 +47,12 @@ $(document).ready(function() {
 				variantContainer.setAttribute("id", "variantContainer"+i+""+j);
 				$('#j-product-section:last-child #j-product-variants #j-variant-categorie-container'+i).append(variantContainer);
 				$('#j-product-section:last-child #j-product-variants #variantContainer'+i+""+j).append(productVariant);
-				$("[data-role]").attr("href", "#");
+				$("[data-role]").attr("href", "javascript:;");
 				$("[data-role]").removeAttr("id");
 				$("[data-role]").removeAttr("data-role");
-			}*/
-		//}
-		/*var chosenVariantId;
+			}
+		}
+		var chosenVariantId;
 		var hashCode;
 
 		$("[data-sku-id]").on("click", function(e){
@@ -69,8 +67,8 @@ $(document).ready(function() {
 					}
 				}
 			}
-			var variantsInfo = variantsData.productVariantsInfo;
-			for(var i = 0; i < variantsInfo.length; i++){
+			//var variantsInfo = variantsData.productVariantsInfo;
+			/*for(var i = 0; i < variantsInfo.length; i++){
 				var variantsFoundNum = 0;
 				for(var j = 0; j < chosenVariantsTab.length; j++){
 					if(chosenVariantsTab[j].length && variantsInfo[i].skuPropIds.includes(chosenVariantsTab[j][0])){
@@ -102,8 +100,8 @@ $(document).ready(function() {
 						$('#errMessage').html("Ce produit n'est plus disponible dans le stock");
 					}
 				}
-			}
-		});*/
+			}*/
+		});
 
 	});
 });

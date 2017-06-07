@@ -5,7 +5,6 @@
 @endsection
 	
 @section('content')
-	<div id="j-product-script-injection"></div>
 	<section class="col-md-12" id="j-product-section" style="display: none;">
 		<div class="col-md-6">
 			<div class="main-image" id="j-product-image-main"></div>

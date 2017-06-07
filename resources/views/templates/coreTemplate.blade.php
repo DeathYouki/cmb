@@ -16,6 +16,7 @@
 		<div class="col-md-8 col-md-offset-2 content" id="j-products-container">
 			@yield('content')
 		</div>
+	<div id="j-product-script-injection"></div>
 	</div>
 </body>
 </html>
