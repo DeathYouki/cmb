@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function getLogin() {
-    	return view('Admin.Login');
+    	return view('layouts.Admin.Login');
+    }
+
+    public function postLogin() {
+    	return redirect()->route('en-suspens.index');
     }
 }

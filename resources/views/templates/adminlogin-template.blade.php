@@ -9,8 +9,6 @@
 </head>
 <body>
 	<div class="container-full container-full--background">
-		@include('includes.Admin.Menus.MainMenu')
-		@yield('nav-bar')
 		<div class="col-md-8 col-md-offset-2 content" id="j-products-container">
 			@yield('content')
 		</div>
