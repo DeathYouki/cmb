@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Commandes\Berra;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Admin;
 
 class EnSuspensController extends Controller
 {

@@ -11,17 +11,23 @@
 |
 */
 Route::get('/', function() {
-	return "!!";
+	return "HOME";
 });
 
-Route::group(['prefix' => 'admin'], function() {
-	//Login Route
-	Route::get('/', 'Admin\LoginController@getLogin');
-	Route::post('/', 'Admin\LoginController@postLogin')->name('adminlogin.post');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
+	Route::get('/', function() {
+		return redirect()->route('en-suspens.index');
+	});
 	//Commandes Routes
 	Route::group(['prefix' => 'commandes'], function() {
+		Route::get('/', function() {
+			return redirect()->route('en-suspens.index');
+		});
 		//Berra Routes
 		Route::group(['prefix' => 'berra'], function() {
+			Route::get('/', function() {
+				return redirect()->route('en-suspens.index');
+			});
 			Route::resource('/en-suspens', 'Admin\Commandes\Berra\EnSuspensController');
 			Route::resource('/payés', 'Admin\Commandes\Berra\PayesController');
 			Route::resource('/achetés', 'Admin\Commandes\Berra\AchetesController');
@@ -39,6 +45,9 @@ Route::group(['prefix' => 'admin'], function() {
 		});
 		//Hna Routes
 		Route::group(['prefix' => 'hna'], function() {
+			Route::get('/', function() {
+				return redirect()->route('commandés.index');
+			});
 			Route::resource('/commandés', 'Admin\Commandes\Hna\CommandesController');
 			Route::resource('/livrés', 'Admin\Commandes\Hna\LivresController');
 			Route::resource('/rejetés', 'Admin\Commandes\Hna\RejetesController', 
@@ -56,6 +65,9 @@ Route::group(['prefix' => 'admin'], function() {
 	});
 	//Haouta Routes
 	Route::group(['prefix' => 'haouta'], function() {
+		Route::get('/', function() {
+			return redirect()->route('vitrinehaouta.index');
+		});
 		Route::resource('/vitrine', 'Admin\Haouta\VitrineController', 
 			['names' => [
 					'index' => 'vitrinehaouta.index',
@@ -72,6 +84,9 @@ Route::group(['prefix' => 'admin'], function() {
 	});
 	//CMH Routes
 	Route::group(['prefix' => 'cmh'], function() {
+		Route::get('/', function() {
+			return redirect()->route('vitrinecmh.index');
+		});
 		Route::resource('/vitrine', 'Admin\Cmh\VitrineController', 
 			['names' => [
 					'index' => 'vitrinecmh.index',
@@ -88,6 +103,9 @@ Route::group(['prefix' => 'admin'], function() {
 	});
 	//Users Routes
 	Route::group(['prefix' => 'utilisateurs'], function() {
+		Route::get('/', function() {
+			return redirect()->route('comptes.index');
+		});
 		Route::resource('/comptes', 'Admin\Utilisateurs\ComptesController');
 		Route::resource('/plaintes', 'Admin\Utilisateurs\PlaintesController');
 	});
