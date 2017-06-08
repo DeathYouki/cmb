@@ -14,7 +14,7 @@ class CommandesController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Commandes.Hna.Commandes');
     }
 
     /**

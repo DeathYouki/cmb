@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class LoginController extends Controller
 {
     public function getLogin() {
-    	return "Login";
+    	return view('Admin.Login');
     }
 }

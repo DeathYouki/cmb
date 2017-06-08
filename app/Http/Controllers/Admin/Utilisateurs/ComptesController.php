@@ -14,7 +14,7 @@ class ComptesController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Utilisateurs.Comptes');
     }
 
     /**

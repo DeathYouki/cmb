@@ -14,7 +14,7 @@ class AjoutProduitController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Cmh.AjoutProduit');
     }
 
     /**

@@ -14,7 +14,7 @@ class PlaintesController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Utilisateurs.Plaintes');
     }
 
     /**

@@ -14,7 +14,7 @@ class AjoutLienController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Haouta.AjoutLien');
     }
 
     /**

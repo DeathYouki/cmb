@@ -14,7 +14,7 @@ class RejetesController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Commandes.Berra.Rejetes');
     }
 
     /**

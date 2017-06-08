@@ -14,7 +14,7 @@ class EnAttentesController extends Controller
      */
     public function index()
     {
-        //
+        return view('layouts.Admin.Haouta.EnAttentes');
     }
 
     /**
