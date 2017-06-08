@@ -14,7 +14,7 @@ Route::get('/', function() {
 	return "!!";
 });
 
-Route::group(['prefix' => 'admin'], ['middleware' => ['web']], function() {
+Route::group(['prefix' => 'admin'], function() {
 	//Login Route
 	Route::get('/', 'Admin\LoginController@getLogin');
 	Route::post('/', 'Admin\LoginController@postLogin')->name('adminlogin.post');
@@ -101,3 +101,6 @@ Route::get('/externalproduct', function() {
 Route::get('/adminexternalproduct', function(){
 	return view('layouts.adminexternalproduct');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
