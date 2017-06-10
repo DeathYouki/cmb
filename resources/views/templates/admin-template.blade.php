@@ -2,9 +2,13 @@
 <html lang="fr">
 <head>
 	<title>@yield('pageTitle')</title>
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/styles/app.css') }}">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/styles/app.css') }}">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<!-- Scripts -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,5 +19,7 @@
 			@yield('content')
 		</div>
 	</div>
+	<!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
