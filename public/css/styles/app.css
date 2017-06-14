@@ -4,7 +4,20 @@
 
 .main-image {
   overflow: hidden;
-  height: 400px; }
+  height: 200px; }
+
+.thumbnails {
+  overflow: hidden; }
+  .thumbnails__element {
+    height: 33px;
+    width: 33px;
+    border: 1px solid green;
+    border-radius: 3px; }
+
+.informations__info {
+  display: inline-block; }
+.informations__label--hidden {
+  display: none; }
 
 html {
   padding: 0px;
@@ -33,19 +46,5 @@ body {
   padding: 0px 0px 0px 0px !important;
   margin: 0;
   height: 100%; }
-
-.thumbnails {
-  overflow: hidden;
-  height: 50px; }
-  .thumbnails__element {
-    height: 50px;
-    width: 50px;
-    border: 1px solid green;
-    border-radius: 3px; }
-
-.informations__info {
-  display: inline-block; }
-.informations__label--hidden {
-  display: none; }
 
 /*# sourceMappingURL=app.css.map */

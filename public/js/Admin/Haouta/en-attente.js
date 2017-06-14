@@ -9,7 +9,7 @@ $(document).ready(function() {
 		}else{
 			//Cloning the product section in case the 1st product has been added
 			var section = $('#j-product-section').clone();	
-			$('#j-products-container').append(section);
+			$('#j-haouta-en-attente').append(section);
 			$('#j-product-section:last-child #j-product-variants').html('');
 		}
 

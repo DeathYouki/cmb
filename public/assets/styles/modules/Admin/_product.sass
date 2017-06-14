@@ -6,8 +6,21 @@
 
 .main-image
 	overflow: hidden
-	height: 400px
+	height: 200px
 
 
+.thumbnails
+	overflow: hidden
+	+e('element')
+		height: 33px
+		width: 33px
+		border: 1px solid green
+		border-radius: 3px
 
+.informations
+	+e('info')
+		display: inline-block
 
+	+e('label')
+		+m('hidden')
+			display: none
