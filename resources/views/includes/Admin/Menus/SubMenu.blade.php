@@ -1,5 +1,5 @@
 <!-- Sub navigation bar : Commandes nav-bar -->
-<nav class="navbar navbar-default j-sub-nav-bar" id="j-commandes-nav-bar">
+<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-commandes">
   <div class="container-fluid" style="text-align: center;">
   	<div class="navbar-header col-md-1" style="background-color: #bbb;">
       <span class="navbar-brand" href="javascript:;">Berra</span>
@@ -22,7 +22,7 @@
   </div>
 </nav>
 <!-- Sub navigation bar : Haouta nav-bar -->
-<nav class="navbar navbar-default j-sub-nav-bar" id="j-haouta-nav-bar" style="display: none;">
+<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-haouta" style="display: none;">
   <div class="container-fluid" style="text-align: center;">
     <ul class="nav navbar-nav col-md-5">
       <li class="col-md-4 j-sub-menu-link active" ><a id="j-sub-menu-link-vitrine-haouta" href="javascript:;">Vitrine</a></li>
@@ -32,7 +32,7 @@
   </div>
 </nav>
 <!-- Sub navigation bar : CMH nav-bar -->
-<nav class="navbar navbar-default j-sub-nav-bar" id="j-cmh-nav-bar" style="display: none;">
+<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-cmh" style="display: none;">
   <div class="container-fluid" style="text-align: center;">
     <ul class="nav navbar-nav col-md-5">
       <li class="col-md-4 j-sub-menu-link active" ><a id="j-sub-menu-link-vitrine-cmh" href="javascript:;">Vitrine</a></li>
@@ -42,10 +42,10 @@
   </div>
 </nav>
 <!-- Sub navigation bar : Utilisateurs nav-bar -->
-<nav class="navbar navbar-default j-sub-nav-bar" id="j-utilisateurs-nav-bar" style="display: none;">
+<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-utilisateurs" style="display: none;">
   <div class="container-fluid" style="text-align: center;">
     <ul class="nav navbar-nav col-md-5">
-      <li class="col-md-6 j-sub-menu-link active" ><a id="j-sub-menu-link-utilisateurs" href="javascript:;">Utilisateurs</a></li>
+      <li class="col-md-6 j-sub-menu-link active" ><a id="j-sub-menu-link-comptes" href="javascript:;">comptes</a></li>
       <li class="col-md-6 j-sub-menu-link" ><a id="j-sub-menu-link-plaintes" href="javascript:;">Plaintes</a></li>
     </ul>
   </div>

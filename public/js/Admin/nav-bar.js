@@ -1,10 +1,10 @@
 //Defines the active navigation tab in the main and sub nav-bar
 var activeMainId = "j-main-menu-link-commandes";
 var activeSubId = {
-	"j-commandes-nav-bar" : "j-sub-menu-link-suspendus",
-	"j-haouta-nav-bar" : "j-sub-menu-link-vitrine-haouta",
-	"j-cmh-nav-bar" : "j-sub-menu-link-vitrine-cmh",
-	"j-utilisateurs-nav-bar" : "j-sub-menu-link-utilisateurs",
+	"j-nav-bar-commandes" : "j-sub-menu-link-suspendus",
+	"j-nav-bar-haouta" : "j-sub-menu-link-vitrine-haouta",
+	"j-nav-bar-cmh" : "j-sub-menu-link-vitrine-cmh",
+	"j-nav-bar-utilisateurs" : "j-sub-menu-link-comptes",
 };
 
 $(document).ready(function() {
@@ -21,6 +21,7 @@ $(document).ready(function() {
 		//get the clicked tab <nav> parent
 		var tabNavBar = $(this).closest("nav");
 		activeSubId[tabNavBar[0].id] = event.target.id; 
+		console.log(event.target.id);
 		tabNavBar.find(".j-sub-menu-link").removeClass("active");
 		$(this).addClass("active");
 		ActiveSubNavBar(event.target.id);
@@ -31,46 +32,53 @@ $(document).ready(function() {
 function Commandes(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
-	$('#j-commandes-nav-bar').css("display", "block");
+	$('#j-nav-bar-commandes').css("display", "block");
+	//console.log(activeSubId["j-nav-bar-commandes"]);
+	ActiveSubNavBar(activeSubId["j-nav-bar-commandes"]);
+
 }
 function Haouta(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
-	$('#j-haouta-nav-bar').css("display", "block");
+	$('#j-nav-bar-haouta').css("display", "block");
+	//console.log(activeSubId[1]);
+	ActiveSubNavBar(activeSubId["j-nav-bar-haouta"]);
 }
 function CMH(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
-	$('#j-cmh-nav-bar').css("display", "block");
+	$('#j-nav-bar-cmh').css("display", "block");
+	ActiveSubNavBar(activeSubId["j-nav-bar-cmh"]);
 }
 function Utilisateurs(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
-	$('#j-utilisateurs-nav-bar').css("display", "block");
+	$('#j-nav-bar-utilisateurs').css("display", "block");
+	ActiveSubNavBar(activeSubId["j-nav-bar-utilisateurs"]);
 }
 
 
-//Function that defines which page content is to be displayed depending on sub nav-bar active tab on active main nav-bar tab
+//Function that defines which page content is to be displayed depending on the clicked sub nav-bar button, or on last active sub nav-bar when changing active main nav-bar
 function ActiveSubNavBar(trigger) {
 	//Tests which main nav-bar is concerned
 	/*Commandes*/
 	if(activeMainId == "j-main-menu-link-commandes"){
 		switch(trigger){
 			//Berra
-			case "j-sub-menu-link-suspendus" : ChangePageContent("");
+			case "j-sub-menu-link-suspendus" : ChangePageContent("j-commandes-berra-suspendus");
 				break;
-			case "j-sub-menu-link-payes" : ChangePageContent("");
+			case "j-sub-menu-link-payes" : ChangePageContent("j-commandes-berra-payes");
 				break;
-			case "j-sub-menu-link-achetes" : ChangePageContent("");
+			case "j-sub-menu-link-achetes" : ChangePageContent("j-commandes-berra-achetes");
 				break;
-			case "j-sub-menu-link-rejetes-berra" : ChangePageContent("");
+			case "j-sub-menu-link-rejetes-berra" : ChangePageContent("j-commandes-berra-rejetes");
 				break;
 			//Hna
-			case "j-sub-menu-link-commandes" : ChangePageContent("");
+			case "j-sub-menu-link-commandes" : ChangePageContent("j-commandes-hna-commandes");
 				break;
-			case "j-sub-menu-link-livres" : ChangePageContent("");
+			case "j-sub-menu-link-livres" : ChangePageContent("j-commandes-hna-livres");
 				break;
-			case "j-sub-menu-link-rejetes-hna" : ChangePageContent("");
+			case "j-sub-menu-link-rejetes-hna" : ChangePageContent("j-commandes-hna-rejetes");
 				break;
 			default : console.log("Target is none of the known sub menu buttons");
 				break;
@@ -79,11 +87,11 @@ function ActiveSubNavBar(trigger) {
 	/*Haouta*/
 	else if(activeMainId == "j-main-menu-link-haouta") {
 		switch(trigger){
-			case "j-sub-menu-link-vitrine-haouta" : ChangePageContent("");
+			case "j-sub-menu-link-vitrine-haouta" : ChangePageContent("j-haouta-vitrine");
 				break;
 			case "j-sub-menu-link-en-attente" : ChangePageContent("j-haouta-en-attente");
 				break;
-			case "j-sub-menu-link-ajout-lien" : ChangePageContent("");
+			case "j-sub-menu-link-ajout-lien" : ChangePageContent("j-haouta-ajout-par-lien");
 				break;
 			default : console.log("Target is none of the known sub menu buttons");
 				break;
@@ -92,11 +100,11 @@ function ActiveSubNavBar(trigger) {
 	/*CMH*/
 	else if(activeMainId == "j-main-menu-link-cmh") {
 		switch(trigger){
-			case "j-sub-menu-link-vitrine-cmh" : ChangePageContent("");
+			case "j-sub-menu-link-vitrine-cmh" : ChangePageContent("j-cmh-vitrine");
 				break;
-			case "j-sub-menu-link-stock" : ChangePageContent("");
+			case "j-sub-menu-link-stock" : ChangePageContent("j-cmh-stock");
 				break;
-			case "j-sub-menu-link-ajout-produit" : ChangePageContent("");
+			case "j-sub-menu-link-ajout-produit" : ChangePageContent("j-cmh-ajout-de-produit");
 				break;
 			default : console.log("Target is none of the known sub menu buttons");
 				break;
@@ -105,17 +113,17 @@ function ActiveSubNavBar(trigger) {
 	/*Utilisateurs*/
 	else if(activeMainId == "j-main-menu-link-utilisateurs") {
 		switch(trigger){
-			case "j-sub-menu-link-utilisateurs" : ChangePageContent("");
+			case "j-sub-menu-link-comptes" : ChangePageContent("j-utilisateurs-comptes");
 				break;
-			case "j-sub-menu-link-plaintes" : ChangePageContent("");
+			case "j-sub-menu-link-plaintes" : ChangePageContent("j-utilisateurs-pleintes");
 				break;
 			default : console.log("Target is none of the known sub menu buttons");
 				break;
 		}
 	}
-	/*Other*/
+	/*Autres*/
 	else{
-		default : console.log("Target is none of the known main menu buttons");
+		console.log("Target is none of the known main menu buttons");
 	}
 		
 }
@@ -138,8 +146,8 @@ function ActiveMainNavBar(trigger) {
 
 //ChangePageContents the body of the page
 function ChangePageContent(targgetPage) {
-	$("#page-content").css("displays", "none");
-	$("#"+ targgetPage).css("display", "block");
+	$(".page-content").css("display", "none");
+	$("#" + targgetPage).css("display", "block");
 }
 //Functions that displays and hide page content depending on which tab in sub nav-bar is active
 function EnAttent() {
