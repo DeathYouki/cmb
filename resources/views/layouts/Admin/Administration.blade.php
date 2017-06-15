@@ -59,9 +59,9 @@
 	<!-- En attente -->
 	<div class="page-content" id="j-haouta-en-attente" style="display: none;">
 		<div id="j-product-script-injection"></div>
-		<section class="col-md-12" id="j-product-section" style="display: none;">
+		<section class="col-md-12 product-section" id="j-product-section" style="display: none;">
 			<div class="col-md-2">
-				<div class="main-image" id="j-product-image-main"></div>
+				<div class="j-product-image-main-image" id="j-product-image-main"></div>
 				<div class="thumbnails" id="j-product-thumbnails"></div>
 			</div>
 			

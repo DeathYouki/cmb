@@ -24,6 +24,7 @@ $(document).ready(function() {
 		console.log(event.target.id);
 		tabNavBar.find(".j-sub-menu-link").removeClass("active");
 		$(this).addClass("active");
+		console.log(event.target);
 		ActiveSubNavBar(event.target.id);
 	});
 });
@@ -33,7 +34,6 @@ function Commandes(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
 	$('#j-nav-bar-commandes').css("display", "block");
-	//console.log(activeSubId["j-nav-bar-commandes"]);
 	ActiveSubNavBar(activeSubId["j-nav-bar-commandes"]);
 
 }
@@ -41,7 +41,6 @@ function Haouta(triggerId) {
 	activeMainId = triggerId;
 	$('.j-sub-nav-bar').css("display", "none");
 	$('#j-nav-bar-haouta').css("display", "block");
-	//console.log(activeSubId[1]);
 	ActiveSubNavBar(activeSubId["j-nav-bar-haouta"]);
 }
 function CMH(triggerId) {
@@ -149,6 +148,7 @@ function ChangePageContent(targgetPage) {
 	$(".page-content").css("display", "none");
 	$("#" + targgetPage).css("display", "block");
 }
+
 //Functions that displays and hide page content depending on which tab in sub nav-bar is active
 function EnAttent() {
 	//
