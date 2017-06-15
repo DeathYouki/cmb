@@ -45,5 +45,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Error Routes
 Route::get('/error404', function() {
-	return view('layouts.Admin.error404');
+	return view('layouts.error404');
 })->name('error404');
