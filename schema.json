@@ -1,0 +1,92 @@
+//Products that are stored in Haouta section
+haouta_products{
+	"_id" : ,
+	"external-id" : ,
+	"name" : ,
+	"images" : [
+		""
+	],
+	"variants-ids" : [
+		[
+			""
+		]
+	],
+	"variants" : [
+		[
+			{
+				""
+			}
+		]
+	],
+	"details" : ,
+	"tags" : [
+		""
+	],
+	"created_at" :
+}
+
+//Products that are stored in CMH
+cmh_products{
+	"_id" : ,
+	"name" : ,
+	"images" : [
+		""
+	],
+	"variants-ids" : [
+		[
+			""
+		]
+	],
+	"variants" : [
+		[
+			{
+				""
+			}
+		]
+	],
+	"details" : ,
+	"tags" : [
+		""
+	],
+	"created_at" :
+}
+
+//Users accounts
+users{
+	"_id" : ,
+	"first-name" : ,
+	"name" : ,
+	"email" : ,
+	"password" : ,
+	"phone" : ,
+	"city" : ,
+	"address" : ,
+	"zip" : ,
+	"profile-pic" : [
+		""
+	],
+	"cart" : {
+		"cart_id" : ,
+		"products" : {
+			"product_id" : ,
+			"price" : ,
+			"quantity" : 
+		}
+	},
+	"created_at" :
+}
+
+//Commands
+commands{
+	"_id" : ,
+	"client_id" : ,
+	"product" : {
+		"product_id" : ,
+		"price" : ,
+		"quantity" : ,
+		"source" : 
+	},
+	"payment" : ,
+	"status" : ,
+	"created_at" :
+}
