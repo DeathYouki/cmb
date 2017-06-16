@@ -20,12 +20,15 @@
 .image {
   overflow: hidden; }
   .image--xs {
-    height: 33px;
-    width: 33px;
-    border: 1px solid green;
+    height: 45px;
+    width: 45px;
+    border: 1px solid grey;
     border-radius: 3px; }
   .image--sm {
     height: 200px; }
+
+.variant--active {
+  border: 1px solid LightGrey; }
 
 .content-section {
   background-color: #fff;

@@ -1,53 +1,59 @@
 $(document).ready(function() {
 	var productsCount = 0;
-	$('#j-section-suspendus-script-injection').bind("DOMSubtreeModified", function() {
+	$('#j-section-haouta-suspendus-scripts').bind("DOMSubtreeModified", function() {
 	/*******DOM blocks and elements creation*******/
 		//Verifiying if a product has been added
 		if(productsCount == 0){
 			productsCount++;
-			$('#j-product-section').css("display", "block");
+			$('#j-content-section-haouta-suspendus').css("display", "block");
 		}else{
 			//Cloning the product section in case the 1st product has been added
-			var section = $('#j-product-section').clone();	
+			var section = $('#j-content-section-haouta-suspendus').clone();	
 			$('#j-haouta-en-attente').append(section);
-			$('#j-product-section:last-child #j-product-variants').html('');
+			//Deleting content of new element
+			$('#j-content-section-haouta-suspendus:last-child').contents().filter(function() {
+				return this.nodeType === 3;
+			}).remove();
+			$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-variants').contents().filter(function() {
+				return this.nodeType === 1;
+			}).remove();
+			$('#j-content-section-haouta-suspendus:last-child .image').remove();
 		}
 
 	/*******Filling the page*******/
 		/*****Product Images*****/
-		//Active Image
+		//Main Image
 		var img = document.createElement('img');
 		img.setAttribute("src", variantsData.productImages[0]);
-		img.setAttribute("class", "product__image--active");
-		$('#j-product-section:last-child #j-product-image-main').html(img);
+		img.setAttribute("class", "image image--sm");
+		$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-images').html(img);
 		//Thumbnails
-		$('#j-product-section:last-child #j-product-thumbnails').html("");
 		for(var i = 0; i < variantsData.productImages.length; i++){
 			img = document.createElement('img');
 			img.setAttribute("src", variantsData.productImages[i]);
-			img.setAttribute("class", "thumbnails__element");
-			$('#j-product-section:last-child #j-product-thumbnails').append(img);
+			img.setAttribute("class", "image image--xs");
+			$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-thumbnails').append(img);
 		}
 		//Product name
-		$('#j-product-section:last-child #j-product-name').html("<h4>" + variantsData.productName + "</h4>");
+		$('#j-content-section-haouta-suspendus:last-child #j-haouta-suspendus-product-name').html("<h4>" + variantsData.productName + "</h4>");
 
 		//console.log(variantsData);
 		var chosenVariantsTab = [];
 		for(var i = 0; i < variantsData.variantContent.length; i++){
+			//Creating a container for each variant row
 			var variantCategorie = document.createElement('div');
 			variantCategorie.setAttribute("style", "margin-bottom: 5px;");
-			variantCategorie.setAttribute("id", "j-variant-categorie-container"+i);
+			variantCategorie.setAttribute("id", "j-variant-categorie-" + i);
+			$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-variants').append(variantCategorie);
+			//Create each variant and puts it in its rightful place
 			chosenVariantsTab[i] = [];
-			$('#j-product-section:last-child #j-product-variants').append(variantCategorie);
 			for(var j = 0; j < variantsData.variantContent[i].length; j++){
 				var productVariant = variantsData.variantContent[i][j];
+				//console.log(productVariant);
 				productVariant = $.parseHTML(productVariant);
-				var variantContainer = document.createElement('div');
-				variantContainer.setAttribute("style", "margin: 5px;display: inline-block;");
-				variantContainer.setAttribute("id", "variantContainer"+i+""+j);
-				$('#j-product-section:last-child #j-product-variants #j-variant-categorie-container'+i).append(variantContainer);
-				$('#j-product-section:last-child #j-product-variants #variantContainer'+i+""+j).append(productVariant);
-				$("[data-role]").attr("href", "javascript:;");
+				$('#j-content-section-haouta-suspendus:last-child #j-variant-categorie-' + i).append(productVariant);
+				$("[data-role]").attr("href", "javascript:void(0)");
+				$("[data-role] img").attr("class", "image image--xs");
 				$("[data-role]").removeAttr("id");
 				$("[data-role]").removeAttr("data-role");
 			}
@@ -57,8 +63,8 @@ $(document).ready(function() {
 
 		$("[data-sku-id]").on("click", function(e){
 			// $(this) is equivalent of e.target in jqery
-			$(this).parent().css("border" , "1px solid aqua");
-			$(this).parent().siblings().css("border" , "none");
+			$(this).children().addClass("variant--active");
+			$(this).siblings().children().removeClass("variant--active");
 			chosenVariantId = e.target.parentElement.getAttribute("data-sku-id");
 			for(var i = 0; i < variantsData.variantsTable.length; i++){
 				for(var j = 0; j < variantsData.variantsTable[i].length; j++){

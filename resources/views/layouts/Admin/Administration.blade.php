@@ -358,29 +358,25 @@
 
 	<!-- En attente -->
 	<div class="page-content" id="j-haouta-en-attente" style="display: none;">
-		<div id="j-product-suspendus-script-injection"></div>
-		<section class="col-md-12 content-section" id="j-content-section-suspendus" style="display: none;">
+		<div id="j-section-haouta-suspendus-scripts"></div>
+		<section class="col-md-12 content-section" id="j-content-section-haouta-suspendus" style="display: none;">
 			<!-- Images area -->
-			<!-- Images area -->
-			<div class="col-md-2 content-section__images">
+			<div class="col-md-2 content-section__images" id="j-haouta-en-attente-images">
 				{{-- <div class="j-product-image-main-image" id="j-product-suspendus-image-main"></div>
 				<div c content-section__datala
 					<div class="data-grp">ails"></div> --}}
-				<div class="thumbnails">
+				<div class="thumbnails" id="j-haouta-en-attente-thumbnails">
 				</div>
 			</div>
 			<!-- Informations area -->
 			<div class="col-md-5 content-section__data">
 				<div class="informations">
-					{{-- <span class="data-grp__info" id="j-product-suspendus-name"></span> --}}
 					<div class="data-grp">
-						<span class="data-grp__info"></span>
+						<span class="data-grp__info" id="j-haouta-suspendus-product-name"></span>
 					</div>
-					{{-- <label class="data-grp__label data-grp__label--hidden" id="j-product-suspendus-chosenvariants-label">Variantes : </label>
-					<span class="data-grp__info" id="j-product-suspendus-variants"></span> --}}
 					<div class="data-grp">
 						<label class="data-grp__label">Variantes : </label>
-						<span class="data-grp__info"></span>
+						<div class="data-grp__block" id="j-haouta-en-attente-variants"></div>
 					</div>
 				</div>
 			</div>
