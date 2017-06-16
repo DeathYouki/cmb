@@ -28,7 +28,10 @@
     height: 200px; }
 
 .variant--active {
-  border: 1px solid LightGrey; }
+  border: 2px solid LightGrey; }
+
+.data-grp--hidden {
+  display: none; }
 
 .content-section {
   background-color: #fff;

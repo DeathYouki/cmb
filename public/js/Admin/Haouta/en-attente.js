@@ -37,27 +37,32 @@ $(document).ready(function() {
 		//Product name
 		$('#j-content-section-haouta-suspendus:last-child #j-haouta-suspendus-product-name').html("<h4>" + variantsData.productName + "</h4>");
 
-		//console.log(variantsData);
-		var chosenVariantsTab = [];
-		for(var i = 0; i < variantsData.variantContent.length; i++){
-			//Creating a container for each variant row
-			var variantCategorie = document.createElement('div');
-			variantCategorie.setAttribute("style", "margin-bottom: 5px;");
-			variantCategorie.setAttribute("id", "j-variant-categorie-" + i);
-			$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-variants').append(variantCategorie);
-			//Create each variant and puts it in its rightful place
-			chosenVariantsTab[i] = [];
-			for(var j = 0; j < variantsData.variantContent[i].length; j++){
-				var productVariant = variantsData.variantContent[i][j];
-				//console.log(productVariant);
-				productVariant = $.parseHTML(productVariant);
-				$('#j-content-section-haouta-suspendus:last-child #j-variant-categorie-' + i).append(productVariant);
-				$("[data-role]").attr("href", "javascript:void(0)");
-				$("[data-role] img").attr("class", "image image--xs");
-				$("[data-role]").removeAttr("id");
-				$("[data-role]").removeAttr("data-role");
+		if(variantsData.variantContent.length){
+			var chosenVariantsTab = [];
+			for(var i = 0; i < variantsData.variantContent.length; i++){
+				//Creating a container for each variant row
+				var variantCategorie = document.createElement('div');
+				variantCategorie.setAttribute("style", "margin-bottom: 5px;");
+				variantCategorie.setAttribute("id", "j-variant-categorie-" + i);
+				$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-variants').append(variantCategorie);
+				//Create each variant and puts it in its rightful place
+				chosenVariantsTab[i] = [];
+				for(var j = 0; j < variantsData.variantContent[i].length; j++){
+					var productVariant = variantsData.variantContent[i][j];
+					//console.log(productVariant);
+					productVariant = $.parseHTML(productVariant);
+					$('#j-content-section-haouta-suspendus:last-child #j-variant-categorie-' + i).append(productVariant);
+					$("[data-role]").attr("href", "javascript:void(0)");
+					$("[data-role] img").attr("class", "image image--xs");
+					$("[data-role]").removeAttr("id");
+					$("[data-role]").removeAttr("data-role");
+					$('#j-content-section-haouta-suspendus:last-child #j-haouta-suspendus-product-variants-grp').attr("class", "data-grp");
+				}
 			}
+		} else{
+			$('#j-content-section-haouta-suspendus:last-child #j-haouta-suspendus-product-variants-grp').attr("class", "data-grp data-grp--hidden");
 		}
+			
 		//var chosenVariantId;
 		//var hashCode;
 

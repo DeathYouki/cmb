@@ -374,7 +374,7 @@
 					<div class="data-grp">
 						<span class="data-grp__info" id="j-haouta-suspendus-product-name"></span>
 					</div>
-					<div class="data-grp">
+					<div class="data-grp" id="j-haouta-suspendus-product-variants-grp">
 						<label class="data-grp__label">Variantes : </label>
 						<div class="data-grp__block" id="j-haouta-en-attente-variants"></div>
 					</div>
