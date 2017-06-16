@@ -53,7 +53,7 @@ body {
   .navbaricons--blue {
     color: #3498db; }
 
-.container-full--background {
+.container-fluid--grey-bg {
   background-color: #f0f0f0;
   padding: 0px 0px 0px 0px !important;
   margin: 0;

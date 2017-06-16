@@ -24,7 +24,6 @@ $(document).ready(function() {
 		console.log(event.target.id);
 		tabNavBar.find(".j-sub-menu-link").removeClass("active");
 		$(this).addClass("active");
-		console.log(event.target);
 		ActiveSubNavBar(event.target.id);
 	});
 });
@@ -56,6 +55,22 @@ function Utilisateurs(triggerId) {
 	ActiveSubNavBar(activeSubId["j-nav-bar-utilisateurs"]);
 }
 
+
+//Function that defines which page content is to be displayed depending on main nav-bar active tab
+function ActiveMainNavBar(trigger) {
+	switch(trigger){
+		case "j-main-menu-link-commandes" : Commandes(trigger);
+			break;
+		case "j-main-menu-link-haouta" : Haouta(trigger);
+			break;
+		case "j-main-menu-link-cmh" : CMH(trigger);
+			break;
+		case "j-main-menu-link-utilisateurs" : Utilisateurs(trigger);
+			break;
+		default : console.log("Target is none of the known main menu buttons");
+			break;
+	}
+}
 
 //Function that defines which page content is to be displayed depending on the clicked sub nav-bar button, or on last active sub nav-bar when changing active main nav-bar
 function ActiveSubNavBar(trigger) {
@@ -127,24 +142,10 @@ function ActiveSubNavBar(trigger) {
 		
 }
 
-//Function that defines which page content is to be displayed depending on main nav-bar active tab
-function ActiveMainNavBar(trigger) {
-	switch(trigger){
-		case "j-main-menu-link-commandes" : Commandes(trigger);
-			break;
-		case "j-main-menu-link-haouta" : Haouta(trigger);
-			break;
-		case "j-main-menu-link-cmh" : CMH(trigger);
-			break;
-		case "j-main-menu-link-utilisateurs" : Utilisateurs(trigger);
-			break;
-		default : console.log("Target is none of the known main menu buttons");
-			break;
-	}
-}
 
 //ChangePageContents the body of the page
-function ChangePageContent(targgetPage) {
+function ChangePageContent(targgetPage) { 
+	console.log("!!!" + targgetPage);
 	$(".page-content").css("display", "none");
 	$("#" + targgetPage).css("display", "block");
 }

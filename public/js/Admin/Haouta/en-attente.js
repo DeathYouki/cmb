@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var productsCount = 0;
-	$('#j-product-script-injection').bind("DOMSubtreeModified", function() {
+	$('#j-section-suspendus-script-injection').bind("DOMSubtreeModified", function() {
 	/*******DOM blocks and elements creation*******/
 		//Verifiying if a product has been added
 		if(productsCount == 0){

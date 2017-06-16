@@ -3,6 +3,8 @@ haouta_products{
 	"_id" : ,
 	"external-id" : ,
 	"name" : ,
+	"original-price" : ,
+	"price" : ,
 	"images" : [
 		""
 	],
@@ -29,6 +31,7 @@ haouta_products{
 cmh_products{
 	"_id" : ,
 	"name" : ,
+	"price" : ,
 	"images" : [
 		""
 	],

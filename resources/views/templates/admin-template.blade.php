@@ -14,7 +14,7 @@
     <script type="text/javascript" src="{{ asset('js/Admin/Haouta/en-attente.js') }}"></script>
 </head>
 <body>
-	<div class="container-full container-full--background">
+	<div class="container-fluid container-fluid--grey-bg">
 		@include('includes.Admin.Menus.MainMenu')
 		@include('includes.Admin.Menus.SubMenu')
 		@yield('nav-bar')
@@ -22,6 +22,5 @@
 			@yield('content')
 		</div>
 	</div>	
-	<!-- Script -->
 </body>
 </html>
