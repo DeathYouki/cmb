@@ -41,7 +41,6 @@ Route::get('/adminexternalproduct', function(){
 
 // User Auth routes
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
 //Error Routes
 Route::get('/error404', function() {

@@ -41,6 +41,6 @@ class LoginController extends Controller
             return redirect()->intended(route('administration.index'));
         }
         //If unsuccessful then redirect back to login
-        return redirect()->back()->withInput($request->only('email', 'remember')); 
+        return redirect()->back()->withInput($request->only('email')); 
     }
 }
