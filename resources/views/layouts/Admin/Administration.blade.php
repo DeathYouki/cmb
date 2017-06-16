@@ -395,6 +395,11 @@
 					<textarea class="form-control informations__input" rows="5" id=""></textarea>
 				</div>
 			</div>
+			<div class="form-group"> 
+				<div class="col-sm-offset-5 col-sm-2">
+					<button type="submit" class="btn btn-default">Ajouter par lien</button>
+				</div>
+			</div>
 		</section>
 	</div>
 
@@ -518,7 +523,7 @@
 					</div>
 				</div>
 				<div class="form-group"> 
-					<div class="col-sm-offset-3 col-sm-10">
+					<div class="col-sm-offset-3 col-sm-3">
 						<button type="submit" class="btn btn-default">Ajouter au stock</button>
 					</div>
 				</div>

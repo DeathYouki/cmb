@@ -22,7 +22,7 @@
   </div>
 </nav>
 <!-- Sub navigation bar : Haouta nav-bar -->
-<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-haouta" style="display: none;">
+<nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-haouta" style="display: none; text-align: center;">
   <div class="container-fluid" style="text-align: center;">
     <ul class="nav navbar-nav col-sm-5">
       <li class="col-sm-4 j-sub-menu-link active" ><a id="j-sub-menu-link-vitrine-haouta" href="javascript:void(0)">Vitrine</a></li>
