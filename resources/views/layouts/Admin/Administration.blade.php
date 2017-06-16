@@ -57,7 +57,7 @@
 
 	<!-- Payés -->
 	<div class="page-content" id="j-commandes-berra-payes" style="display: none;">
-		<section class="col-md-12 product-section " style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -105,7 +105,7 @@
 
 	<!-- Achetés -->
 	<div class="page-content" id="j-commandes-berra-achetes" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -149,7 +149,7 @@
 
 	<!-- Rejetés -->
 	<div class="page-content" id="j-commandes-berra-rejetes" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -198,7 +198,7 @@
 	<!-- ***** Hna ***** -->
 	<!-- Commandés -->
 	<div class="page-content" id="j-commandes-hna-commandes" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -242,7 +242,7 @@
 
 	<!-- Livrés(payés) -->
 	<div class="page-content" id="j-commandes-hna-livres" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -286,7 +286,7 @@
 
 	<!-- Rejetés -->
 	<div class="page-content" id="j-commandes-hna-rejetes" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -326,7 +326,7 @@
 <!-- **************** Haouta **************** -->
 	<!-- Vitrine -->
 	<div class="page-content" id="j-haouta-vitrine" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -359,7 +359,7 @@
 	<!-- En attente -->
 	<div class="page-content" id="j-haouta-en-attente" style="display: none;">
 		<div id="j-product-suspendus-script-injection"></div>
-		<section class="col-md-12 content-section" id="j-product-section-suspendus" style="display: none;">
+		<section class="col-md-12 content-section" id="j-content-section-suspendus" style="display: none;">
 			<!-- Images area -->
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
@@ -392,10 +392,10 @@
 
 	<!-- Ajout par lien -->
 	<div class="page-content" id="j-haouta-ajout-par-lien" style="display: none;">
-		<section class="col-md-8 col-sm-offset-2 content-section" id="">
+		<section class="col-md-12 content-section" id="">
 			<div class="form-group">
-				<label for="" class="control-label col-sm-12 data-grp__label">Ajoutez des liens (séparés par des retours chariots) :</label>
-				<div class="col-sm-12">
+				<label for="" class="control-label col-sm-8 col-sm-offset-2 data-grp__label">Ajoutez des liens (séparés par des retours chariots) :</label>
+				<div class=" col-sm-8 col-sm-offset-2">
 					<textarea class="form-control informations__input" rows="5" id=""></textarea>
 				</div>
 			</div>
@@ -405,7 +405,7 @@
 <!-- **************** CMH **************** -->
 	<!-- Vitrine -->
 	<div class="page-content" id="j-cmh-vitrine" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -433,7 +433,7 @@
 
 	<!-- Stock -->
 	<div class="page-content" id="j-cmh-stock" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">
@@ -461,40 +461,40 @@
 
 	<!-- Ajout de produit -->
 	<div class="page-content" id="j-cmh-ajout-de-produit" style="display: none;">
-		<section class="col-md-8 col-md-offset-1" id="">
-			<form class="form-horizontal">
+		<section class="col-md-12 content-section" id="">
+			<form class="form-horizontal col-sm-8 col-sm-offset-2">
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Nom du produit :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Nom du produit :</label>
 					<div class="col-sm-8">
 						<input type="" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Images :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Images :</label>
 					<div class="col-sm-8">
 						<input type="file" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Prix :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Prix :</label>
 					<div class="col-sm-8">
 						<input type="" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Quantité :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Quantité :</label>
 					<div class="col-sm-8">
 						<input type="" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Tags :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Tags :</label>
 					<div class="col-sm-8">
 						<input type="" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Catégorie :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Catégorie :</label>
 					<div class="col-sm-8">
 						<select class="form-control" id="">
 							<option>1</option>
@@ -502,7 +502,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Sous-catégorie :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Sous-catégorie :</label>
 					<div class="col-sm-8">
 						<select class="form-control" id="">
 							<option>1</option>
@@ -510,19 +510,19 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4 data-grp__label" for="">Lien vidéo :</label>
+					<label class="control-label col-sm-3 data-grp__label" for="">Lien vidéo :</label>
 					<div class="col-sm-8">
 						<input type="" class="form-control informations__input" id="" placeholder="">
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="" class="control-label col-sm-4 data-grp__label">Description :</label>
+					<label for="" class="control-label col-sm-3 data-grp__label">Description :</label>
 					<div class="col-sm-8">
 						<textarea class="form-control informations__input" rows="5" id=""></textarea>
 					</div>
 				</div>
 				<div class="form-group"> 
-					<div class="col-sm-offset-4 col-sm-10">
+					<div class="col-sm-offset-3 col-sm-10">
 						<button type="submit" class="btn btn-default">Ajouter au stock</button>
 					</div>
 				</div>
@@ -533,7 +533,7 @@
 <!-- **************** Utilisateurs **************** -->
 	<!-- Utilisateurs -->
 	<div class="page-content" id="j-utilisateurs-comptes" style="display: none;">
-		<section class="col-md-12 product-section" style="display: none;">
+		<section class="col-md-12 content-section" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images">
 				<div class="thumbnails">

@@ -1,28 +1,40 @@
-.product__image--active {
-  max-height: 100%;
-  max-width: 100%; }
+/********* Template ******** */
+.container-fluid--grey-bg {
+  background-color: #f0f0f0;
+  padding: 0px 0px 0px 0px !important;
+  margin: 0;
+  height: 100%;
+  overflow: auto; }
 
-.product-section {
-  height: 300px;
-  background-color: #fff;
-  padding: 5px;
-  margin: 5px; }
+/********* Nav-bar ******** */
+.navbar {
+  border-radius: 0px !important; }
 
-.main-image {
-  overflow: hidden;
-  height: 200px; }
+.j-main-menu-link {
+  padding: 0px; }
 
-.thumbnails {
+.j-sub-menu-link {
+  padding: 0px; }
+
+/********* Page-content ******** */
+.image {
   overflow: hidden; }
-  .thumbnails__element {
+  .image--xs {
     height: 33px;
     width: 33px;
     border: 1px solid green;
     border-radius: 3px; }
+  .image--sm {
+    height: 200px; }
 
-.informations__info {
+.content-section {
+  background-color: #fff;
+  padding: 10px 0px 10px 0px;
+  overflow: auto; }
+
+.data-grp__info {
   display: inline-block; }
-.informations__label--hidden {
+.data-grp__label--hidden {
   display: none; }
 
 html {
@@ -34,30 +46,5 @@ body {
   padding: 0px;
   margin: 0px;
   height: 100%; }
-
-.navbar {
-  border-radius: 0px !important; }
-
-.j-main-menu-link {
-  padding: 0px; }
-
-.j-sub-menu-link {
-  padding: 0px; }
-
-.navbaricons {
-  font-size: 2.5em; }
-  .navbaricons--green {
-    color: #2ecc71; }
-  .navbaricons--red {
-    color: #e74c3c; }
-  .navbaricons--blue {
-    color: #3498db; }
-
-.container-fluid--grey-bg {
-  background-color: #f0f0f0;
-  padding: 0px 0px 0px 0px !important;
-  margin: 0;
-  height: 100%;
-  overflow: auto; }
 
 /*# sourceMappingURL=app.css.map */

@@ -18,7 +18,7 @@
 		@include('includes.Admin.Menus.MainMenu')
 		@include('includes.Admin.Menus.SubMenu')
 		@yield('nav-bar')
-		<div class="col-md-12 content" id="j-core-container">
+		<div class="col-md-12" id="j-content-container">
 			@yield('content')
 		</div>
 	</div>	

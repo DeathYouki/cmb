@@ -1,0 +1,46 @@
+/********* Template *********/
+.container-fluid
+	+m('grey-bg')
+		background-color: #f0f0f0
+		padding: 0px 0px 0px 0px !important
+		margin: 0
+		height: 100% 
+		overflow: auto
+
+
+/********* Nav-bar *********/
+.navbar
+	border-radius: 0px !important
+
+.j-main-menu-link
+	padding: 0px
+
+.j-sub-menu-link
+	padding: 0px
+
+
+/********* Page-content *********/
+.image
+	overflow: hidden
+	+m('xs')
+		height: 33px
+		width: 33px
+		border: 1px solid green
+		border-radius: 3px
+	+m('sm')
+		height: 200px
+
+
+.content-section
+	background-color: #fff
+	padding: 10px 0px 10px 0px
+	overflow: auto
+
+		
+
+.data-grp
+	+e('info')
+		display: inline-block
+	+e('label')
+		+m('hidden')
+			display: none
