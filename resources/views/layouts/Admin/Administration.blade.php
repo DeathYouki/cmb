@@ -362,9 +362,6 @@
 		<section class="col-md-12 content-section" id="j-content-section-haouta-suspendus" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images" id="j-haouta-en-attente-images">
-				{{-- <div class="j-product-image-main-image" id="j-product-suspendus-image-main"></div>
-				<div c content-section__datala
-					<div class="data-grp">ails"></div> --}}
 				<div class="thumbnails" id="j-haouta-en-attente-thumbnails">
 				</div>
 			</div>

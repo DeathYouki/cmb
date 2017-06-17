@@ -21,7 +21,6 @@ $(document).ready(function() {
 		//get the clicked tab <nav> parent
 		var tabNavBar = $(this).closest("nav");
 		activeSubId[tabNavBar[0].id] = event.target.id; 
-		console.log(event.target.id);
 		tabNavBar.find(".j-sub-menu-link").removeClass("active");
 		$(this).addClass("active");
 		ActiveSubNavBar(event.target.id);
@@ -145,7 +144,6 @@ function ActiveSubNavBar(trigger) {
 
 //ChangePageContents the body of the page
 function ChangePageContent(targgetPage) { 
-	console.log("!!!" + targgetPage);
 	$(".page-content").css("display", "none");
 	$("#" + targgetPage).css("display", "block");
 }

@@ -14,25 +14,40 @@
 .navbar-nav {
   padding: 0px; }
 
-.navbar-right {
-  padding-right: 15px; }
+.navbar-brand {
+  padding-left: 10px; }
 
-.j-main-menu-link {
+.navbar-container {
   padding: 0px; }
 
-.j-sub-menu-link {
-  padding: 0px; }
+.nav-overflow--hidden {
+  overflow: hidden; }
 
+/* .main-menu__a-link
+ * padding-right: 0px !important
+ * padding-right: 0px !important */
+/* .main-menu__li-link
+ * padding-right: 0px !important
+ * padding-right: 0px !important */
+/* .sub-menu__a-link
+ * padding-right: 0px !important
+ * padding-right: 0px !important */
+/* .sub-menu__li-link
+ * padding-right: 0px !important
+ * padding-right: 0px !important */
 /********* Page-content ******** */
 .image {
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px solid grey;
+  border-radius: 2px; }
+  .image--xxs {
+    height: 30px;
+    width: 30px; }
   .image--xs {
     height: 45px;
-    width: 45px;
-    border: 1px solid grey;
-    border-radius: 3px; }
+    width: 45px; }
   .image--sm {
-    height: 200px; }
+    height: 180px; }
 
 .variant--active {
   border: 2px solid LightGrey; }

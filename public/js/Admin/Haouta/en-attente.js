@@ -26,12 +26,13 @@ $(document).ready(function() {
 		var img = document.createElement('img');
 		img.setAttribute("src", variantsData.productImages[0]);
 		img.setAttribute("class", "image image--sm");
-		$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-images').html(img);
+		$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-images').prepend(img);
 		//Thumbnails
 		for(var i = 0; i < variantsData.productImages.length; i++){
+		console.log(variantsData.productImages[i]);
 			img = document.createElement('img');
 			img.setAttribute("src", variantsData.productImages[i]);
-			img.setAttribute("class", "image image--xs");
+			img.setAttribute("class", "image image--xxs");
 			$('#j-content-section-haouta-suspendus:last-child #j-haouta-en-attente-thumbnails').append(img);
 		}
 		//Product name

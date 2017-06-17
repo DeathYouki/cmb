@@ -15,26 +15,46 @@
 .navbar-nav
 	padding: 0px
 
-.navbar-right
-	padding-right: 15px
+.navbar-brand
+	padding-left: 10px
 
-.j-main-menu-link
+.navbar-container
 	padding: 0px
 
-.j-sub-menu-link
-	padding: 0px
+.nav-overflow
+	+m('hidden')
+		overflow: hidden
+
+/* .main-menu__a-link
+	padding-right: 0px !important
+	padding-right: 0px !important */
+
+/* .main-menu__li-link
+	padding-right: 0px !important
+	padding-right: 0px !important */
+
+/* .sub-menu__a-link
+	padding-right: 0px !important
+	padding-right: 0px !important */
+
+/* .sub-menu__li-link
+	padding-right: 0px !important
+	padding-right: 0px !important */
 
 
 /********* Page-content *********/
 .image
 	overflow: hidden
+	border: 1px solid grey
+	border-radius: 2px
+	+m('xxs')
+		height: 30px
+		width: 30px
 	+m('xs')
 		height: 45px
 		width: 45px
-		border: 1px solid grey
-		border-radius: 3px
 	+m('sm')
-		height: 200px
+		height: 180px
 
 .variant
 	+m('active')
