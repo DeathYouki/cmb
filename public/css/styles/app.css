@@ -23,18 +23,25 @@
 .nav-overflow--hidden {
   overflow: hidden; }
 
-/* .main-menu__a-link
- * padding-right: 0px !important
- * padding-right: 0px !important */
-/* .main-menu__li-link
- * padding-right: 0px !important
- * padding-right: 0px !important */
-/* .sub-menu__a-link
- * padding-right: 0px !important
- * padding-right: 0px !important */
-/* .sub-menu__li-link
- * padding-right: 0px !important
- * padding-right: 0px !important */
+.navbar-header--active {
+  background-color: #e7e7e7; }
+
+.main-menu__a-link {
+  padding-right: 0px;
+  padding-right: 0px; }
+
+.main-menu__li-link {
+  padding-right: 0px;
+  padding-right: 0px; }
+
+.sub-menu__a-link {
+  padding-right: 0px;
+  padding-right: 0px; }
+
+.sub-menu__li-link {
+  padding-right: 0px;
+  padding-right: 0px; }
+
 /********* Page-content ******** */
 .image {
   overflow: hidden;

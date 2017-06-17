@@ -2,10 +2,10 @@
 <nav class="navbar navbar-default j-sub-nav-bar" id="j-nav-bar-commandes">
   <div class="container-fluid" style="text-align: center;">
   <div class="col-sm-12 navbar-container nav-overflow--hidden">
-  	<div class="navbar-header col-sm-6" style="background-color: #bbb;">
+  	<div class="navbar-header col-sm-6 navbar-header--active" id="j-commandes-berra-navbar-header">
       <span href="javascript:void(0)">Berra</span>
     </div>
-    <div class="navbar-header col-sm-6" style="background-color: #bbb;">
+    <div class="navbar-header col-sm-6" id="j-commandes-hna-navbar-header">
       <span href="javascript:void(0)">Hna</span>
     </div>
     <ul class="nav navbar-nav col-sm-6">

@@ -79,19 +79,26 @@ function ActiveSubNavBar(trigger) {
 		switch(trigger){
 			//Berra
 			case "j-sub-menu-link-suspendus" : ChangePageContent("j-commandes-berra-suspendus");
+				BerraHnaSwitch(0);
 				break;
 			case "j-sub-menu-link-payes" : ChangePageContent("j-commandes-berra-payes");
+				BerraHnaSwitch(0);
 				break;
 			case "j-sub-menu-link-achetes" : ChangePageContent("j-commandes-berra-achetes");
+				BerraHnaSwitch(0);
 				break;
 			case "j-sub-menu-link-rejetes-berra" : ChangePageContent("j-commandes-berra-rejetes");
+				BerraHnaSwitch(0);
 				break;
 			//Hna
 			case "j-sub-menu-link-commandes" : ChangePageContent("j-commandes-hna-commandes");
+				BerraHnaSwitch(1);
 				break;
 			case "j-sub-menu-link-livres" : ChangePageContent("j-commandes-hna-livres");
+				BerraHnaSwitch(1);
 				break;
 			case "j-sub-menu-link-rejetes-hna" : ChangePageContent("j-commandes-hna-rejetes");
+				BerraHnaSwitch(1);
 				break;
 			default : console.log("Target is none of the known sub menu buttons");
 				break;
@@ -138,7 +145,6 @@ function ActiveSubNavBar(trigger) {
 	else{
 		console.log("Target is none of the known main menu buttons");
 	}
-		
 }
 
 
@@ -148,7 +154,22 @@ function ChangePageContent(targgetPage) {
 	$("#" + targgetPage).css("display", "block");
 }
 
-//Functions that displays and hide page content depending on which tab in sub nav-bar is active
-function EnAttent() {
+//Highlights the correct tab in the commandes's sub manus's header
+function BerraHnaSwitch(which) {
+	if(!which) {
+		//Berra
+		$('#j-commandes-berra-navbar-header').attr("class", "navbar-header col-sm-6 navbar-header--active");
+		$('#j-commandes-hna-navbar-header').attr("class", "navbar-header col-sm-6");
+	} else {
+		//Hna
+		$('#j-commandes-berra-navbar-header').attr("class", "navbar-header col-sm-6");
+		$('#j-commandes-hna-navbar-header').attr("class", "navbar-header col-sm-6 navbar-header--active");
+	}
+}
+
+function getEnAttent() {
+	//
+}
+function get() {
 	//
 }
