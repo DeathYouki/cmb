@@ -11,26 +11,18 @@
             <li class="col-sm-2 main-menu__li-link j-main-menu-link" ><a class="main-menu__a-link" id="j-main-menu-link-utilisateurs" href="javascript:void(0)">Utilisateurs</a></li>
             <li class="col-sm-2 main-menu__li-link j-main-menu-link" ><a class="main-menu__a-link" id="j-main-menu-link-statistiques" href="javascript:void(0)">Statistiques</a></li> 
         </ul>
-        <div class="nav navbar-nav col-sm-1">
-        <!-- Logout Links -->
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropdown-toggle main-menu__a-link" data-toggle="dropdown" role="button" aria-expanded="false">
-                {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
+        <!-- Logout -->
+        <ul class="nav navbar-nav col-sm-1">
+            <li class="col-sm-2 main-menu__li-link" >
+                <a class="main-menu__a-link" href="{{ route('logout') }}" onclick="
+                event.preventDefault(); 
+                document.getElementById('logout-form').submit();"><strong>Logout</strong></a>
 
-                <ul class="dropdown-menu" role="menu">
-                <li class="col-sm-2 main-menu__li-link" >
-                    <a class="main-menu__a-link" href="{{ route('logout') }}" onclick="
-                    event.preventDefault(); 
-                    document.getElementById('logout-form').submit();">Logout</a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    {{ csrf_field() }}
-                    </form>
-                </li>
-                </ul>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+                </form>
             </li>
-        </div>
+        </ul>
         </div>
     </div>
 </nav>
