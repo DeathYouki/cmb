@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Produit;
+use App\ProduitHaouta;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Redirect;
@@ -15,18 +15,10 @@ class ProduitHaoutaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $produits = Produit::all();
-        $data=[];
-        foreach ($produits as $produit){
-
-            $data[]=[
-                "id" => $produit->id,
-                "name"  => $produit->name ,
-                "marque" => $produit->marque
-            ];
-        }
+        $produits = ProduitHaouta::all();
 
         return response()->json($produits);
     }
@@ -38,7 +30,7 @@ class ProduitHaoutaController extends Controller
      */
     public function create()
     {
-        return view("create");
+        return "create";
     }
 
     /**
@@ -50,37 +42,13 @@ class ProduitHaoutaController extends Controller
     public function store(Request $request)
     {
 
-        //dd($request->input());
-        $pro= new Produit();
-        //$pro= $request->input();
+        $pro = new ProduitHaouta();
 
-        $pro->id = $request->input('id');
-
-        $pro->external_id = $request->input('external_id');
-
-        $pro->name = $request->input('name');
-        $pro->original_price = $request->input('original_price');
-        $pro->price = $request->input('price');
-
-        $pro->images = $request->input('images');
-
-        $pro->variants_ids =$request->input('variants_ids');
-
-        $pro->variants= $request->input('variants') ;
-
-        $pro->details = $request->input('details');
-        
-        $pro->tags = $request->input('tags');
+        $pro->buffer($request->input());
 
         $pro->save();
 
         return "true";
-
-
-
-        //return view("home");
-
-
 
     }
 
@@ -93,12 +61,12 @@ class ProduitHaoutaController extends Controller
     public function show($id)
     {
         //
-        if($produit = Produit::where('id', $id)->first()){
-        return response()->json($produit);}
-        else {
+        return $id;
+        if($produit = ProduitHaouta::where('id', $id)->first()){
+            return response()->json($produit);
+        } else {
             return "False";
         }
-
 
     }
 
@@ -110,7 +78,7 @@ class ProduitHaoutaController extends Controller
      */
     public function edit($id)
     {
-        return view("editProduct");
+        return "edit";
     }
 
     /**
@@ -123,8 +91,11 @@ class ProduitHaoutaController extends Controller
     public function update(Request $request, $id)
     {
         //echo (count(Produit::where('id', $id)->get()));
-        if (!$produit = Produit::where('id', $id)->first()){ echo "false"; }
-        else{$produit =  Produit::where('id', $id)
+        if (!$produit = ProduitHaouta::where('id', $id)->first()){ 
+            echo "false"; 
+        }
+        else{
+            $produit =  ProduitHaouta::where('id', $id)
                     ->update([
 
                                 'name' => $request->input('name'),
@@ -135,15 +106,15 @@ class ProduitHaoutaController extends Controller
 
                                 'variants_ids' =>$request->input('variants_ids'),
 
-                                'variants'=> $request->input('variants') ,
+                                'variants_data'=> $request->input('variants_data') ,
 
                                 'details' => $request->input('details'),
                                 
                                 'tags' => $request->input('tags')
                                 
                             ]);
-                return "true";
-            }
+            return "true";
+        }
 
     }
 
@@ -155,9 +126,11 @@ class ProduitHaoutaController extends Controller
      */
     public function destroy($id)
     {
-        if ( !$produit = Produit::where('id', $id)->first()){ return "false" ;}
-        else{produit::where('id', $id)->delete(); return "true";}
-        //echo "safi tmse7";
-
+        if ( !$produit = ProduitHaouta::where('id', $id)->first()){ 
+            return "false" ;
+        }
+        else{
+            produit::where('id', $id)->delete(); return "true";
+        }
     }
 }

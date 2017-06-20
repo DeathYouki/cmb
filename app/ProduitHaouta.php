@@ -4,7 +4,37 @@ namespace App;
 
 use Moloquent;
 
-class Produit extends Moloquent
+class ProduitHaouta extends Moloquent
 {
-    //
+    public function buffer($data) {
+
+    	$this->id = uniqid();
+
+        $this->external_id = $data['external_id'];
+
+        $this->name = $data['name'];
+
+        /*$this->original_price = array(
+        	$data['variants_data'][0]['skuVal']['skuCalPrice'],
+        	);*/
+
+        //$this->price = $this->original_price * 10;
+
+        $this->images = $data['images'];
+
+        $this->status = "attente";
+
+        if(isset($data['variants_ids'])) {
+
+        	$this->variants_ids = $data['variants_ids'];
+
+	        $this->variants_data = $data['variants_data'];
+
+	        $this->variants_html = $data['variants_html'];
+        }
+        
+        //$this->details = $data['details'];
+        
+        //$this->tags = $data['tags'];
+    }
 }

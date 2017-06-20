@@ -358,7 +358,8 @@
 
 	<!-- En attente -->
 	<div class="page-content" id="j-haouta-en-attente" style="display: none;">
-		<div id="j-section-haouta-suspendus-scripts"></div>
+		<div id="j-section-haouta-en-attente-post-product-scripts"></div>
+		<div id="j-section-haouta-en-attente-get-product-scripts"></div>
 		<section class="col-md-12 content-section" id="j-content-section-haouta-suspendus" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images" id="j-haouta-en-attente-images">

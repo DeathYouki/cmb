@@ -110,6 +110,7 @@ function ActiveSubNavBar(trigger) {
 			case "j-sub-menu-link-vitrine-haouta" : ChangePageContent("j-haouta-vitrine");
 				break;
 			case "j-sub-menu-link-en-attente" : ChangePageContent("j-haouta-en-attente");
+				getHaoutaEnAttent();
 				break;
 			case "j-sub-menu-link-ajout-lien" : ChangePageContent("j-haouta-ajout-par-lien");
 				break;
@@ -167,8 +168,21 @@ function BerraHnaSwitch(which) {
 	}
 }
 
-function getEnAttent() {
-	//
+//var baseURL = "http://www.cmb.com/api/produithaouta";
+function postHaoutaEnAttent() {
+	/*console.log(haoutaEnAttentePostProductsTable);
+	$.post(baseURL + "", haoutaEnAttentePostProductsTable, function(data, status){
+		console.log(data);
+	});*/
+}
+function getHaoutaEnAttent() {
+	/*$.get(baseURL + "", function(data, status){
+		var haoutaEnAttenteGetProductsTable = data;
+		console.log(haoutaEnAttenteGetProductsTable);
+		var dataScriptInjection = document.createElement('script');
+		dataScriptInjection.append("var variantsData = " + JSON.stringify(haoutaEnAttenteGetProductsTable));
+		$('#j-section-haouta-en-attente-get-product-scripts').append(dataScriptInjection);
+	});*/
 }
 function get() {
 	//
