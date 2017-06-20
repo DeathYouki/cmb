@@ -7,22 +7,22 @@ use Moloquent;
 class ProduitHaouta extends Moloquent
 {
     public function buffer($data) {
-
+        
     	$this->id = uniqid();
 
         $this->external_id = $data['external_id'];
 
         $this->name = $data['name'];
 
-        /*$this->original_price = array(
-        	$data['variants_data'][0]['skuVal']['skuCalPrice'],
-        	);*/
+        $this->original_price = $data['variants_data'][0]['skuVal']['skuCalPrice'];
 
-        //$this->price = $this->original_price * 10;
+        $this->price = $this->original_price * 10;
 
         $this->images = $data['images'];
 
         $this->status = "attente";
+
+        $this->details_html = $data['details_html'];
 
         if(isset($data['variants_ids'])) {
 
@@ -33,8 +33,8 @@ class ProduitHaouta extends Moloquent
 	        $this->variants_html = $data['variants_html'];
         }
         
-        //$this->details = $data['details'];
-        
-        //$this->tags = $data['tags'];
+        if(isset($data['tags'])){
+        	$this->tags = $data['tags'];
+        }
     }
 }

@@ -155,7 +155,7 @@ function ChangePageContent(targgetPage) {
 	$("#" + targgetPage).css("display", "block");
 }
 
-//Highlights the correct tab in the commandes's sub manus's header
+//Highlights the correct tab in the commandes's sub menus's header
 function BerraHnaSwitch(which) {
 	if(!which) {
 		//Berra
@@ -168,21 +168,20 @@ function BerraHnaSwitch(which) {
 	}
 }
 
-//var baseURL = "http://www.cmb.com/api/produithaouta";
-function postHaoutaEnAttent() {
-	/*console.log(haoutaEnAttentePostProductsTable);
-	$.post(baseURL + "", haoutaEnAttentePostProductsTable, function(data, status){
-		console.log(data);
-	});*/
-}
+var baseURL = "http://www.cmb.com/";
+var apiBaseURL = baseURL + "api/produithaouta";
+var displayedHaoutaEnAttenteProducts = [];
 function getHaoutaEnAttent() {
-	/*$.get(baseURL + "", function(data, status){
-		var haoutaEnAttenteGetProductsTable = data;
-		console.log(haoutaEnAttenteGetProductsTable);
-		var dataScriptInjection = document.createElement('script');
-		dataScriptInjection.append("var variantsData = " + JSON.stringify(haoutaEnAttenteGetProductsTable));
-		$('#j-section-haouta-en-attente-get-product-scripts').append(dataScriptInjection);
-	});*/
+	$.get(apiBaseURL, function(data, status){
+		for(var i = 0 ; i < data.length ; i++){
+			if(!displayedHaoutaEnAttenteProducts.includes(data[i].id)){
+				var variantsData = data[i];
+				console.log(variantsData);
+				haoutaDisplayProduct_Admin(variantsData);
+				displayedHaoutaEnAttenteProducts.push(data[i].id);
+			}
+		}
+	});
 }
 function get() {
 	//
