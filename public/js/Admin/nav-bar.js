@@ -73,72 +73,97 @@ function ActiveMainNavBar(trigger) {
 
 //Function that defines which page content is to be displayed depending on the clicked sub nav-bar button, or on last active sub nav-bar when changing active main nav-bar
 function ActiveSubNavBar(trigger) {
-	//Tests which main nav-bar is concerned
+	//Tests which main nav-bar is Active
 	/*Commandes*/
 	if(activeMainId == "j-main-menu-link-commandes"){
+		//Tests which sub naav-bar in concerned by the triggered event
 		switch(trigger){
 			//Berra
-			case "j-sub-menu-link-suspendus" : ChangePageContent("j-commandes-berra-suspendus");
+			case "j-sub-menu-link-suspendus" : 
+				ChangePageContent("j-commandes-berra-suspendus");
 				BerraHnaSwitch(0);
 				break;
-			case "j-sub-menu-link-payes" : ChangePageContent("j-commandes-berra-payes");
+			case "j-sub-menu-link-payes" : 
+				ChangePageContent("j-commandes-berra-payes");
 				BerraHnaSwitch(0);
 				break;
-			case "j-sub-menu-link-achetes" : ChangePageContent("j-commandes-berra-achetes");
+			case "j-sub-menu-link-achetes" : 
+				ChangePageContent("j-commandes-berra-achetes");
 				BerraHnaSwitch(0);
 				break;
-			case "j-sub-menu-link-rejetes-berra" : ChangePageContent("j-commandes-berra-rejetes");
+			case "j-sub-menu-link-rejetes-berra" : 
+				ChangePageContent("j-commandes-berra-rejetes");
 				BerraHnaSwitch(0);
 				break;
 			//Hna
-			case "j-sub-menu-link-commandes" : ChangePageContent("j-commandes-hna-commandes");
+			case "j-sub-menu-link-commandes" :
+
+				ChangePageContent("j-commandes-hna-commandes");
 				BerraHnaSwitch(1);
 				break;
-			case "j-sub-menu-link-livres" : ChangePageContent("j-commandes-hna-livres");
+			case "j-sub-menu-link-livres" : 
+				ChangePageContent("j-commandes-hna-livres");
 				BerraHnaSwitch(1);
 				break;
-			case "j-sub-menu-link-rejetes-hna" : ChangePageContent("j-commandes-hna-rejetes");
+			case "j-sub-menu-link-rejetes-hna" : 
+				ChangePageContent("j-commandes-hna-rejetes");
 				BerraHnaSwitch(1);
 				break;
-			default : console.log("Target is none of the known sub menu buttons");
+			default : 
+				console.log("Target is none of the known sub menu buttons");
 				break;
 		}
 	} 
 	/*Haouta*/
 	else if(activeMainId == "j-main-menu-link-haouta") {
+		//Tests which sub naav-bar in concerned by the triggered event
 		switch(trigger){
-			case "j-sub-menu-link-vitrine-haouta" : ChangePageContent("j-haouta-vitrine");
+			case "j-sub-menu-link-vitrine-haouta" : 
+				ChangePageContent("j-haouta-vitrine");
+				getHaoutaVitrine();
 				break;
-			case "j-sub-menu-link-en-attente" : ChangePageContent("j-haouta-en-attente");
+			case "j-sub-menu-link-en-attente" : 
+				ChangePageContent("j-haouta-en-attente");
 				getHaoutaEnAttent();
 				break;
-			case "j-sub-menu-link-ajout-lien" : ChangePageContent("j-haouta-ajout-par-lien");
+			case "j-sub-menu-link-ajout-lien" : 
+				ChangePageContent("j-haouta-ajout-par-lien");
 				break;
-			default : console.log("Target is none of the known sub menu buttons");
+			default : 
+				console.log("Target is none of the known sub menu buttons");
 				break;
 		}
 	}
 	/*CMH*/
 	else if(activeMainId == "j-main-menu-link-cmh") {
+		//Tests which sub naav-bar in concerned by the triggered event
 		switch(trigger){
-			case "j-sub-menu-link-vitrine-cmh" : ChangePageContent("j-cmh-vitrine");
+			case "j-sub-menu-link-vitrine-cmh" : 
+				ChangePageContent("j-cmh-vitrine");
 				break;
-			case "j-sub-menu-link-stock" : ChangePageContent("j-cmh-stock");
+			case "j-sub-menu-link-stock" : 
+				ChangePageContent("j-cmh-stock");
 				break;
-			case "j-sub-menu-link-ajout-produit" : ChangePageContent("j-cmh-ajout-de-produit");
+			case "j-sub-menu-link-ajout-produit" : 
+				ChangePageContent("j-cmh-ajout-de-produit");
 				break;
-			default : console.log("Target is none of the known sub menu buttons");
+			default : 
+				console.log("Target is none of the known sub menu buttons");
 				break;
 		}
 	}
 	/*Utilisateurs*/
 	else if(activeMainId == "j-main-menu-link-utilisateurs") {
+		//Tests which sub naav-bar in concerned by the triggered event
 		switch(trigger){
-			case "j-sub-menu-link-comptes" : ChangePageContent("j-utilisateurs-comptes");
+			case "j-sub-menu-link-comptes" : 
+				ChangePageContent("j-utilisateurs-comptes");
 				break;
-			case "j-sub-menu-link-plaintes" : ChangePageContent("j-utilisateurs-pleintes");
+			case "j-sub-menu-link-plaintes" : 
+				ChangePageContent("j-utilisateurs-pleintes");
 				break;
-			default : console.log("Target is none of the known sub menu buttons");
+			default : 
+				console.log("Target is none of the known sub menu buttons");
 				break;
 		}
 	}
@@ -170,19 +195,33 @@ function BerraHnaSwitch(which) {
 
 var baseURL = "http://www.cmb.com/";
 var apiBaseURL = baseURL + "api/produithaouta";
+
+
 var displayedHaoutaEnAttenteProducts = [];
+var displayedHaoutaVitrineProducts = [];
 function getHaoutaEnAttent() {
-	$.get(apiBaseURL, function(data, status){
+	$.get(apiBaseURL + "/enattente", function(data, status){
 		for(var i = 0 ; i < data.length ; i++){
 			if(!displayedHaoutaEnAttenteProducts.includes(data[i].id)){
 				var variantsData = data[i];
 				console.log(variantsData);
-				haoutaDisplayProduct_Admin(variantsData);
+				haoutaEnAttenteDisplayProduct_Admin(variantsData);
 				displayedHaoutaEnAttenteProducts.push(data[i].id);
 			}
 		}
 	});
 }
-function get() {
-	//
+
+
+function getHaoutaVitrine() {
+	$.get(apiBaseURL + "/vitrine", function(data, status){
+		for(var i = 0 ; i < data.length ; i++){
+			if(!displayedHaoutaVitrineProducts.includes(data[i].id)){
+				var variantsData = data[i];
+				console.log(variantsData);
+				haoutaVitrineDisplayProduct_Admin(variantsData);
+				displayedHaoutaVitrineProducts.push(data[i].id);
+			}
+		}
+	});
 }

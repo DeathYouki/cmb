@@ -12,6 +12,7 @@
     <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/Admin/nav-bar.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/Admin/Haouta/en-attente.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/Admin/administration.js') }}"></script>
 </head>
 <body>
 	<div class="container-fluid container-fluid--grey-bg">

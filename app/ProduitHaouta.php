@@ -20,7 +20,7 @@ class ProduitHaouta extends Moloquent
 
         $this->images = $data['images'];
 
-        $this->status = "attente";
+        $this->status = $data['status'];
 
         $this->details_html = $data['details_html'];
 

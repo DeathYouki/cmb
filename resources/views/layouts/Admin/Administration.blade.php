@@ -326,29 +326,33 @@
 <!-- **************** Haouta **************** -->
 	<!-- Vitrine -->
 	<div class="page-content" id="j-haouta-vitrine" style="display: none;">
-		<section class="col-md-12 content-section" style="display: none;">
+		<section class="col-md-12 content-section" id="j-content-section-haouta-vitrine" style="display: none;">
 			<!-- Images area -->
-			<div class="col-md-2 content-section__images">
-				<div class="thumbnails">
+			<div class="col-md-2 content-section__images" id="j-haouta-vitrine-images">
+				<div class="thumbnails" id="j-haouta-vitrine-thumbnails">
 				</div>
 			</div>
 			<!-- Informations area -->
 			<div class="col-md-5 content-section__data">
 				<div class="data-grp">
+					<span class="data-grp__info" id="j-haouta-vitrine-product-name"></span>
+				</div>
+				<div class="data-grp" id="j-haouta-en-attente-product-variants-grp">
+					<label class="data-grp__label">Variantes : </label>
+					<div class="data-grp__block" id="j-haouta-vitrine-variants"></div>
+				</div>
+				<div class="data-grp">
+					<label class="data-grp__label">Quantité en stock : </label>
 					<span class="data-grp__info"></span>
 				</div>
-					<div class="data-grp">
-						<label class="data-grp__label">Quantité en stock : </label>
-						<span class="data-grp__info"></span>
-					</div>
-					<div class="data-grp">
-						<label class="data-grp__label">Status : </label>
-						<span class="data-grp__info"></span>
-					</div>
-					<div class="data-grp">
-						<label class="data-grp__label">Date d'ajout : </label>
-						<span class="data-grp__info"></span>
-					</div>
+				<div class="data-grp">
+					<label class="data-grp__label">Status : </label>
+					<span class="data-grp__info"></span>
+				</div>
+				<div class="data-grp">
+					<label class="data-grp__label">Date d'ajout : </label>
+					<span class="data-grp__info"></span>
+				</div>
 			</div>
 			<!-- Control buttons area -->
 			<div class="col-md-3 content-section__control">
@@ -358,8 +362,7 @@
 
 	<!-- En attente -->
 	<div class="page-content" id="j-haouta-en-attente" style="display: none;">
-		<div id="j-section-haouta-en-attente-get-product-scripts"></div>
-		<section class="col-md-12 content-section" id="j-content-section-haouta-suspendus" style="display: none;">
+		<section class="col-md-12 content-section" id="j-content-section-haouta-en-attente" style="display: none;">
 			<!-- Images area -->
 			<div class="col-md-2 content-section__images" id="j-haouta-en-attente-images">
 				<div class="thumbnails" id="j-haouta-en-attente-thumbnails">
@@ -367,14 +370,12 @@
 			</div>
 			<!-- Informations area -->
 			<div class="col-md-5 content-section__data">
-				<div class="informations">
-					<div class="data-grp">
-						<span class="data-grp__info" id="j-haouta-suspendus-product-name"></span>
-					</div>
-					<div class="data-grp" id="j-haouta-suspendus-product-variants-grp">
-						<label class="data-grp__label">Variantes : </label>
-						<div class="data-grp__block" id="j-haouta-en-attente-variants"></div>
-					</div>
+				<div class="data-grp">
+					<span class="data-grp__info" id="j-haouta-en-attente-product-name"></span>
+				</div>
+				<div class="data-grp" id="j-haouta-en-attente-product-variants-grp">
+					<label class="data-grp__label">Variantes : </label>
+					<div class="data-grp__block" id="j-haouta-en-attente-variants"></div>
 				</div>
 			</div>
 			<!-- Control buttons area -->

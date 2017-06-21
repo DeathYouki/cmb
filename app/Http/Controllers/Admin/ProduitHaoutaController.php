@@ -60,14 +60,10 @@ class ProduitHaoutaController extends Controller
      */
     public function show($id)
     {
-        //
-        return $id;
-        if($produit = ProduitHaouta::where('id', $id)->first()){
-            return response()->json($produit);
-        } else {
-            return "False";
+        if(isset($id) && !empty($id) && ($id == 'enattente' || $id == 'vitrine')){
+            $products = ProduitHaouta::where('status', $id)->get();
+            return response()->json($products);
         }
-
     }
 
     /**
